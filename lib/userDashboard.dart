@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:map_launcher/map_launcher.dart';
 import 'main.dart';
 import 'test.dart';
 
@@ -164,13 +164,17 @@ class _UserDashboardState extends State<UserDashboard> {
     //   //   onPressed: () {},
     //   // ),
     // );
-
+    final title = "Vihanga";
+    final description = "Our Home";
+    final coords = Coords(17.436292, 78.331378);
     launchURL() async {
-      const url = 'https://flutter.dev';
-      if (await canLaunch(url)) {
-        await launch(url);
-      } else {
-        throw 'Could not launch $url';
+      if (await MapLauncher.isMapAvailable(MapType.google)) {
+        await MapLauncher.launchMap(
+          mapType: MapType.google,
+          coords: coords,
+          title: title,
+          description: description,
+        );
       }
     }
 
