@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: Colors.deepOrange,
         accentColor: Colors.deepOrangeAccent,
-        // Define the default font family.
+        // Define the default font family..
         //fontFamily: 'Monsterrat',
         // Define the default TextTheme. Use this to specify the default
         // text styling for headlines, titles, bodies of text, and more.
